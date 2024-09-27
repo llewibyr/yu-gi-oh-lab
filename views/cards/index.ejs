@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/cards.css">
+    <title>Cards Index Page</title>
+</head>
+
+<body>
+    <h1><%= message %> - All Cards</h1>
+    <ul>
+      <% cards.forEach(card => { %>
+        <li><a href=“/cards/<%= card._id %>"><%= card.name %></a></li>
+      <% }); %>
+    </ul>
+
+    <a href="/">Go Back to Homepage</a> | <a href=“/cards/new">Add new card</a>
+  </body>
+  
+</html>

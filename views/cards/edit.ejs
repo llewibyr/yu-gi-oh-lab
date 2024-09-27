@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Edit Page</title>
+  </head>
+  <body>
+    <h1>Card Edit - <%= card.name %></h1>
+    <form method="POST" action=“/cards/<%=card._id%>?_method=PUT">
+      <div>
+        <label for="name">card Name:</label>
+        <input type="text" name="name" id="name" value="<%= card.name %>" />
+      </div>
+      <div>
+        <label for="isReadyForBattle>Ready for Battle:</label>
+        <input type="checkbox" name="ReadyForBattle id="ReadyForBattle <%=
+        card.ReadyForBattle ? "checked" : "" %> />
+      </div>
+
+      <button type="submit">Edit Card</button>
+    </form>
+  </body>
+</html>
