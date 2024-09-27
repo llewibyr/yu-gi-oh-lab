@@ -4,7 +4,7 @@
     
     -Users will be able to add and create their own Yu-Gi-Oh cards in the database.
 
-        -We as kids grew up watching Yu-Gi-Oh and it change our entire lives evening keeping us out of the streets, so we want give back!!!
+        -We as kids grew up watching Yu-Gi-Oh and it change our entire lives evening keeping us out of the streets, so we want to give back!!!
     
     Links - https://github.com/llewibyr/yu-gi-oh-lab
     
@@ -18,7 +18,6 @@
      - Node
      - Morgan
      - method overide
-     - Dotenv
      - EJS
      - MONGODB
     
