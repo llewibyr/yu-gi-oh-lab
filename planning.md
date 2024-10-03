@@ -1,5 +1,10 @@
 
     Screenshot/Logo: A screenshot of your app or a logo.
+
+    https://upload.wikimedia.org/wikipedia/commons/1/11/Yu-Gi-Oh%21_%28Logo%29.jpg
+
+
+
     Your app’s name: Yu-Gi-Oh Decks!! Include a description of your app and its functionality. 
     
     -Users will be able to add and create their own Yu-Gi-Oh cards in the database.

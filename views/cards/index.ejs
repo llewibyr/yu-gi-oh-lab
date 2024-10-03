@@ -8,14 +8,26 @@
 </head>
 
 <body>
-    <h1><%= message %> - All Cards</h1>
-    <ul>
-      <% cards.forEach(card => { %>
-        <li><a href=“/cards/<%= card._id %>"><%= card.name %></a></li>
-      <% }); %>
-    </ul>
+    <header>
+        <h1> All Cards</h1>
+        <nav>
+            <a href="/">Go Back to Homepage</a>  
+            <a href="/cards/new">Add New Card</a>
+        </nav>
+    </header>
 
-    <a href="/">Go Back to Homepage</a> | <a href=“/cards/new">Add new card</a>
-  </body>
-  
+    <main>
+        <ul>
+            <% cards.forEach(card => { %>
+                <li>
+                    <a href="/cards/<%= card._id %>"><%= card.name %></a>
+                    <a href="/cards/<%= card._id %>/edit">Edit</a>
+                    <form action="/cards/<%= card._id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+</body>
 </html>

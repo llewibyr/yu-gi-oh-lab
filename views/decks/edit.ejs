@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Deck</title>
+</head>
+<body>
+    <h1>Edit Deck: <%= deck.name %></h1>
+    
+    <form action="/decks/<%= deck._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Deck Name:</label>
+            <input type="text" id="name" name="name" value="<%= deck.name %>" required>
+        </div>
+        <div>
+            <label for="deckType">Deck Type:</label>
+            <input type="text" id="deckType" name="deckType" value="<%= deck.deckType %>" required>
+        </div>
+        <button type="submit">Update Deck</button>
+    </form>
+
+    <a href="/decks/<%= deck._id %>">Cancel</a>
+</body>
+</html>
