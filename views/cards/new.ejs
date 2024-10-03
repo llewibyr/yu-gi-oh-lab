@@ -6,17 +6,34 @@
     <title>Add New Card</title>
 </head>
 <body>
-  <h1>Create a New Card!</h1>
-  <form action=“/cards" method="POST">
-    <div>
-        <label for="name">Card Name:</label>
-        <input type="text" name="name" id="name" />
+    <h1>Create a New Card!</h1>
+    <form action="/cards" method="POST">
+        <div>
+            <label for="name">Card Name:</label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+            <label for="level">Level:</label>
+            <input type="text" name="level" id="level" required />
+        </div>
+        <div>
+            <label for="type">Type:</label>
+            <input type="text" name="type" id="type" required />
+        </div>
+        <div>
+            <label for="attack">Attack Rating:</label>
+            <input type="text" name="attack" id="attack" required />
+        </div>
+        <div>
+          <label for="defense">Defense Rating:</label>
+          <input type="text" name="defense" id="defense" required />
       </div>
-      <div>
-        <label for="ReadyForBattle>Ready for Battle:</label>
-        <input type="checkbox" name="ReadyForBattle id="ReadyForBattle />
-    </div>
-    <button type="submit">Add Cards</button>
-    
+        <div>
+            <label for="readyForBattle">Ready for Battle:</label>
+            <input type="checkbox" name="readyForBattle" id="readyForBattle" />
+        </div>
+        <button type="submit">Add Card</button>
+    </form>
+    <a href="/cards">Back to Cards</a>
 </body>
 </html>

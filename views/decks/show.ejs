@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= deck.name %></title>
+</head>
+<body>
+    <h1><%= deck.name %></h1>
+    <p> Deck Type: <%= deck.deckType %></p>
+
+    <h2> Cards in your Deck:</h2>
+    <ul>
+        <% if (deck.cards.length > 0) { %>
+            <% deck.cards.forEach(function(card){ %>
+                <li>
+                    <strong><%= card.name %></strong>: <%= card.description %>
+                </li>
+           <% }) %>
+           <% } else {%>
+                <li> No Cards in this Deck sucka</li>
+          <% } %>
+    </ul>
+    <a href="/decks/index">Back to Decks</a>
+    <a href="/cards/home">Back to Homepage</a>
+    <a href="/cards/new">Add another Card</a>
+</body>
+</html>

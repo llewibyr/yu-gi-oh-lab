@@ -1,0 +1,46 @@
+// Card Schema
+class Card {
+  constructor(id, name, suit, value) {
+    this.id = id;       // Unique identifier for the card
+    this.name = name;   // Name of the card (e.g., "Ace of Spades")
+    this.suit = suit;   // Suit of the card (e.g., "Hearts")
+    this.value = value; // Value of the card (e.g., 1 for Ace, 11 for Jack, etc.)
+  }
+}
+
+// Deck Schema
+class Deck {
+  constructor() {
+    this.cards = []; // Array to hold the cards in the deck
+  }
+
+  addCard(card) {
+    this.cards.push(card);
+    console.log(`${card.name} added to the deck.`);
+  }
+
+  displayCards() {
+    console.log("Current Cards in the Deck:");
+    this.cards.forEach(card => {
+      console.log(`${card.name} of ${card.suit}`);
+    });
+  }
+}
+
+// Example usage
+
+// Create a new deck
+const deck = new Deck();
+
+// Create some cards
+const card1 = new Card(1, "Ace", "Spades", 1);
+const card2 = new Card(2, "King", "Hearts", 13);
+const card3 = new Card(3, "Queen", "Diamonds", 12);
+
+// Add cards to the deck
+deck.addCard(card1);
+deck.addCard(card2);
+deck.addCard(card3);
+
+// Display cards in the deck
+deck.displayCards();
