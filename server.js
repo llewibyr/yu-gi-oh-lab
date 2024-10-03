@@ -3,7 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cardController = require('./controllers/cards.js');
-const deckController = require('./controllers/decks.js');
+const deckController = require('./controllers/deck.js');
 
 
 // Middleware
@@ -27,12 +27,14 @@ mongoose.connection.on("error", (err) => {
 });
 
 const Card = require("./models/card");
-const Deck = require('./models/deck')
+const Deck = require('./models/deck');
+
 // Setting up view engine and middleware
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
+
 app.use(express.static(path.join(__dirname, "public"))); // Uncommented static files middleware
 
 // Routes
