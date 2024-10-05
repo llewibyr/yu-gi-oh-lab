@@ -27,10 +27,6 @@
                         <% cards.forEach(card => { %>
                             <div>
                               <h2><%= card.name %></h2>
-                              <form method="POST" action="/decks/<%= deckId %>/cards"> 
-                                <input type="hidden" name="cardId" value="<%= card._id %>">
-                                <button type="submit">Add to Deck</button>
-                              </form>
                             </div>
                           <% }) %>
                     </form>
