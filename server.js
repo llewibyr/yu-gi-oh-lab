@@ -55,10 +55,11 @@ app.put("/cards/:id", cardController.editCard);
 app.get("/decks/new", deckController.getNewForm);
 app.get("/decks/:id", deckController.getOneDeck);
 app.get("/decks", deckController.getAllDecks);
-app.post("/decks/:Id/cards", deckController.createDeck);
+app.post("/decks", deckController.createDeck);
 app.delete("/decks/:id", deckController.deleteDeck);
-app.get("/decks/:deckId/edit", deckController.getEditForm);
-app.put('/decks/id:', deckController.editDeck);
+app.get("/decks/:id/edit", deckController.getEditForm);
+app.put('/decks/:id', deckController.editDeck);
+app.post('/decks/:id/cards', deckController.addCardToDeck);
 
 // Starting the server
 app.listen(PORT, () => {

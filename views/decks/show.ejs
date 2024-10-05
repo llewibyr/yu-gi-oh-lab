@@ -22,8 +22,18 @@
                 <li> No Cards in this Deck sucka</li>
           <% } %>
     </ul>
+    <form action="/decks/<%= deck._id %>/cards" method="POST">
+        <label for="cardId">Select Card to Add:</label>
+        <select name="cardId" id="cardId" required>
+          <% cards.forEach(card => { %>
+            <option value="<%= card._id %>"><%= card.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Add Existing Card to Deck</button>
+      </form>
+      
     <a href="/decks/index">Back to Decks</a>
     <a href="/cards/home">Back to Homepage</a>
-    <a href="/cards/new">Add another Card</a>
+    <a href="/decks/<%= deck._id %>/cards/new">Add a Card</a>
 </body>
 </html>

@@ -7,20 +7,28 @@
     <title>Edit Deck</title>
 </head>
 <body>
-    <h1>Edit Deck: <%= deck.name %></h1>
-    
-    <form action="/decks/<%= deck._id %>?_method=PUT" method="POST">
+    <h1>Edit Deck - <%= deck.name %></h1>
+    <form method="POST" action="/decks/<%= deck._id %>?_method=PUT">
         <div>
             <label for="name">Deck Name:</label>
-            <input type="text" id="name" name="name" value="<%= deck.name %>" required>
+            <input type="text" name="name" id="name" value="<%= deck.name %>" required />
         </div>
         <div>
             <label for="deckType">Deck Type:</label>
-            <input type="text" id="deckType" name="deckType" value="<%= deck.deckType %>" required>
+            <input type="text" name="deckType" id="deckType" value="<%= deck.deckType %>" required />
         </div>
         <button type="submit">Update Deck</button>
     </form>
 
-    <a href="/decks/<%= deck._id %>">Cancel</a>
+    <h2>Add Cards to Deck</h2>
+    <% cards.forEach(card => { %> 
+        <div>
+            <h3><%= card.name %></h3>
+            <a href="/decks/<%= deck._id %>/cards?cardId=<%= card._id %>">
+            <button type="button">Add Card to Deck</button>
+                    </a>
+            </form>
+        </div>
+    <% }) %>
 </body>
 </html>

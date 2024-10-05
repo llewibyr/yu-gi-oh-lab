@@ -1,10 +1,12 @@
 const Card = require("../models/card");
+const Deck = require("../models/deck")
 
 const getAllCards = async (req, res) => {
   try {
     const allCards = await Card.find();
+    const deckId = req.query.deckId
     console.log(allCards);
-    res.render("cards/index", { cards: allCards });
+    res.render("cards/index", { cards: allCards, deckId: deckId });
   } catch (err) {
     console.error(err);
     res.redirect("/?error=Failed to load cards");
@@ -83,6 +85,32 @@ const editCard = async (req, res) => {
   }
 };
 
+const addCardToDeck = async (req, res) => {
+  const {deckId } = req.params;
+  const { cardId } = req.body;
+  
+  try {
+    const deck = await Deck.findById(deckId);
+    if(!deck) {
+      return res.status(404).send('Deck not found');
+    }
+
+    const cardExists = await Card.findById(cardId);
+    if(!cardExists) {
+      return res.status(404).send('Card not found');
+    }
+
+    if (!deck.cards.includes(cardId)) {
+      deck.cards.push(cardId);
+      await deck.save();
+    }
+
+    res.redirect(`/decks/${deck._id}`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error')
+  }
+};
 module.exports = {
   getAllCards,
   getOneCard,
@@ -91,4 +119,5 @@ module.exports = {
   editCard,
   getNewForm,
   getEditForm,
+  addCardToDeck
 };
