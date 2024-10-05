@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a New Deck</title>
+    <title>Create a New</title>
 </head>
 <body>
     <h1>Create a New Deck</h1>
-    <form action="/decks" method="POST">
+    <form action="/decks/new" method="POST">
         <div>
             <label for="name">Deck Name:</label>
             <input type="text" id="name" name="name" required>
@@ -18,7 +18,7 @@
         </div>
         <button type="submit">Create Deck</button>
     </form>
-    <a href="/decks">Back to Decks</a>
+    <a href="/decks">See your Decks</a>
     <a href="/cards/home">Back to Homepage</a>
     <a href="/cards/new">Add a Card to your Deck</a>
 </body>
