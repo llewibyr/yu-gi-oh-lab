@@ -27,7 +27,7 @@ const getOneCard = async (req, res) => {
 };
 
 const getNewForm = (req, res) => {
-  res.render("cards/new");
+  res.render("cards/new", );
 };
 
 const createCard = async (req, res) => {

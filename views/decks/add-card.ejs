@@ -33,8 +33,12 @@
             <label for="readyForBattle">Ready for Battle:</label>
             <input type="checkbox" name="readyForBattle" id="readyForBattle" />
         </div>
-        <button type="submit">Add a Card </button>
+        <button type="submit">Add a Card to your Deck</button>
+        <form method="POST" action="/decks/<%= deck._id %>/cards"> 
+            <input type="hidden" name="cardId" value="<%= card._id %>">
+            <button type="submit">Add to Deck</button>
+          </form>
     </form>
-    <a href="/cards">Back to Cards</a>
+    <a href="/decks/<%= deck._id %>">Back to Cards</a>
 </body>
 </html>

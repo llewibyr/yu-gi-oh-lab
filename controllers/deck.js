@@ -91,10 +91,11 @@ const getOneDeck = async (req, res) => {
     }
   };
 
+  // Used ChatGPT // ADD CARD route
   const addCardToDeck = async (req, res) => {
     const {deckId } = req.params;
     const { cardId } = req.body;
-    
+    console.log(deckId, cardId)
     try {
       const deck = await Deck.findById(deckId);
       if(!deck) {
