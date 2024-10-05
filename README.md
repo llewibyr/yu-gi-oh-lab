@@ -60,5 +60,5 @@ Attributions: This section should include links to any external resources (such 
 
 
 # Contributors
-Kai Smith & Byron Lewis 
+Kai Smith & Byron Lewis Jr.
 

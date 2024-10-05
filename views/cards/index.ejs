@@ -20,15 +20,12 @@
         <ul>
             <% cards.forEach(card => { %>
                 <li>
-                    <a href="/cards/<%= card._id %>"><%= card.name %></a>
-                    <a href="/cards/<%= card._id %>/edit">Edit</a>
+                    <div>
+                        <h2 class="cardName"><a href="/cards/<%= card._id %>"><%= card.name %></a></h2>
+                      </div>
+                    <button><a href="/cards/<%= card._id %>/edit">Edit</a></button>
                     <form action="/cards/<%= card._id %>?_method=DELETE" method="POST" style="display:inline;">
                         <button type="submit">Delete</button>
-                        <% cards.forEach(card => { %>
-                            <div>
-                              <h2><%= card.name %></h2>
-                            </div>
-                          <% }) %>
                     </form>
                 </li>
             <% }); %>
