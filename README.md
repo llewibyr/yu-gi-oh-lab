@@ -1,5 +1,5 @@
 # ScreenShot/Logo
-[Link](https://seeklogo.com/images/Y/Yu-Gu-Oh_-logo-FA1A029B70-seeklogo.com.png)
+![Link](https://seeklogo.com/images/Y/Yu-Gu-Oh_-logo-FA1A029B70-seeklogo.com.png)
 
 # Name
 # Yu-Gi-Oh Card App!
@@ -59,6 +59,6 @@ Attributions: This section should include links to any external resources (such 
                                - Quitting Our Jobs!
 
 
-
-
+# Contributors
+Kai Smith & Byron Lewis 
 
