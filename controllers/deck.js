@@ -118,12 +118,7 @@ const getOneDeck = async (req, res) => {
       res.status(500).send('Server error')
     }
   };
-// 1. Look up deck by ID
-    // 2. Render new temp. and pass deck info to temp.
-  // Send Post with form that takes ID from form & form body and update deck with addCard
 
-  // Other function -> Finding deck by ID -> Create new Card -> Puts ID of new card into decks cards field and then saves the deck
-    
 module.exports = {
     getAllDecks,
     getOneDeck,
