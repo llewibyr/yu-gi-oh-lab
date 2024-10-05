@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/deck.css"> 
+    <title>Edit Deck</title>
+</head>
+<body>
+    <h1>Edit Deck - <%= deck.name %></h1>
+    <form method="POST" action="/decks/<%= deck._id %>?_method=PUT">
+        <div>
+            <label for="name">Deck Name:</label>
+            <input type="text" name="name" id="name" value="<%= deck.name %>" required />
+        </div>
+        <div>
+            <label for="deckType">Deck Type:</label>
+            <input type="text" name="deckType" id="deckType" value="<%= deck.deckType %>" required />
+        </div>
+        <button type="submit">Update Deck</button>
+    </form>
+
+    <h2>Add Cards to Deck</h2>
+    <% cards.forEach(card => { %> 
+        <div>
+            <h3><%= card.name %></h3>
+            <a href="/decks/<%= deck._id %>/cards?cardId=<%= card._id %>">
+            <button type="button">Add Card to Deck</button>
+                    </a>
+            </form>
+        </div>
+    <% }) %>
+</body>
+</html>

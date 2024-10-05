@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decks List</title>
+    <link rel="stylesheet" href="/styles/deck.css"> 
+</head>
+<body>
+    <h1>Your Decks</h1>
+
+    <% if (decks.length > 0) { %>
+        <ul>
+            <% decks.forEach(function(deck) { %>
+                <li>
+                    <strong><a href="/decks/<%= deck._id %>"><%= deck.name %></a></strong>
+                    (Type: <%= deck.deckType %>)
+                    <a href="/decks/<%= deck._id %>/edit">Edit</a>
+                    <form action="/decks/<%= deck._id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No decks available.</p>
+    <% } %>
+
+    <a href="/decks/new">Create a New Deck</a>
+</body>
+</html>
