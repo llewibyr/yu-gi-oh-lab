@@ -44,3 +44,17 @@ deck.addCard(card3);
 
 // Display cards in the deck
 deck.displayCards();
+
+Step by Step Documentation
+
+We decided to start with the server.js since that was the base for appying all the implementations for the rest of the work.
+We remember to const all the Imports that would be needed and highlighted out const path and app.use express static since it's used for our styling 
+
+Byron created the contoller and came up with the idea to do a card game based on Yu-Gi-Oh, we started brainstorming what we wanted to use for the models cards folder 
+
+Created a public/styles folder with card and nav css. will wait to get more info on the background we would like to use and also figure out how to get the css to work since it wasn't covered in our class 
+
+Errors
+Few errors in the server on line 28 stating an invalid token due to some improper inputs also was linked to controllers card.js and model card.js. tested the code again more errors and realized line 28 in the server was labled ("./models/card.js") instead of ("./models/card")
+
+Few route erros to the get to the deck

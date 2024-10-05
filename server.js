@@ -27,12 +27,14 @@ mongoose.connection.on("error", (err) => {
 });
 
 const Card = require("./models/card");
-const Deck = require('./models/deck')
+const Deck = require('./models/deck');
+
 // Setting up view engine and middleware
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
+
 app.use(express.static(path.join(__dirname, "public"))); // Uncommented static files middleware
 
 // Routes
