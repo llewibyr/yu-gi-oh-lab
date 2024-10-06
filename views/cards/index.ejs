@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/cards.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/cards.css" />
     <title>Cards Index Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1> All Cards</h1>
-        <nav>
-            <a href="/">Go Back to Homepage</a>  
-            <a href="/cards/new">Add New Card</a>
-        </nav>
+      <h1>All Cards</h1>
+      <nav>
+        <a href="/">Go Back to Homepage</a>
+        <a href="/cards/new">Add New Card</a>
+      </nav>
     </header>
 
     <main>
-        <ul>
-            <% cards.forEach(card => { %>
-                <li>
-                    <div>
-                        <h2 class="cardName"><a href="/cards/<%= card._id %>"><%= card.name %></a></h2>
-                      </div>
-                    <button><a href="/cards/<%= card._id %>/edit">Edit</a></button>
-                    <form action="/cards/<%= card._id %>?_method=DELETE" method="POST" style="display:inline;">
-                        <button type="submit">Delete</button>
-                    </form>
-                </li>
-            <% }); %>
-        </ul>
+      <ul>
+        <% cards.forEach(card => { %>
+        <li>
+          <div>
+            <h2 class="cardName">
+              <a href="/cards/<%= card._id %>"><%= card.name %></a>
+            </h2>
+            <img src="<%=card.image %>" alt="<%=card.name %>" />
+          </div>
+          <button><a href="/cards/<%= card._id %>/edit">Edit</a></button>
+          <form
+            action="/cards/<%= card._id %>?_method=DELETE"
+            method="POST"
+            style="display: inline"
+          >
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+        <% }); %>
+      </ul>
     </main>
-</body>
+  </body>
 </html>

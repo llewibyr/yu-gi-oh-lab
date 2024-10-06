@@ -20,6 +20,12 @@
     <li><strong>Defense:</strong> <%= card.defense %></li>
     <li><strong>Ready for Battle:</strong> <%= card.readyForBattle ? 'Yes' : 'No' %></li>
 </ul>
+
+  <div>
+    
+      <img src="<%= card.image %>" alt="<%= card.name %> image" >
+  </div>
+
   <form method="POST" action="/cards/<%= card._id %>?_method=DELETE">
     <button type="submit">Delete Card</button>
   </form>

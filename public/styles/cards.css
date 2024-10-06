@@ -7,12 +7,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9fb;
+    background-color: #3465bb;
 }
 
 body:hover {
-    background-color: #5a0a0a; 
-    color: #f5f5f5; 
+    background-color: #630241; 
+    color: #2b58ab; 
 }
 
 header {
@@ -40,8 +40,8 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: rgb(233, 23, 23);
+    background-color: #0b0b0b;
+    color: rgb(194, 13, 178);
     position: fixed;
     width: 100%;
     bottom: 0;
