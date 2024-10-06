@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/deck.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/deck.css" />
     <title>Add New Card</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Create a New Card!</h1>
     <form action="/cards" method="POST">
-        <div>
-            <label for="name">Card Name:</label>
-            <input type="text" name="name" id="name" required />
-        </div>
-        <div>
-            <label for="level">Level:</label>
-            <input type="text" name="level" id="level" required />
-        </div>
-        <div>
-            <label for="type">Type:</label>
-            <input type="text" name="type" id="type" required />
-        </div>
-        <div>
-            <label for="attack">Attack Rating:</label>
-            <input type="text" name="attack" id="attack" required />
-        </div>
-        <div>
-          <label for="defense">Defense Rating:</label>
-          <input type="text" name="defense" id="defense" required />
+      <div>
+        <label for="name">Card Name:</label>
+        <input type="text" name="name" id="name" required />
       </div>
-        <div>
-            <label for="readyForBattle">Ready for Battle:</label>
-            <input type="checkbox" name="readyForBattle" id="readyForBattle" />
-        </div>
-        <button type="submit">Add a Card to your Deck</button>
-        <form method="POST" action="/decks/<%= deck._id %>/cards"> 
-            <input type="hidden" name="cardId" value="<%= card._id %>">
-            <button type="submit">Add to Deck</button>
-          </form>
+      <div>
+        <label for="level">Level:</label>
+        <input type="text" name="level" id="level" required />
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <input type="text" name="type" id="type" required />
+      </div>
+      <div>
+        <label for="attack">Attack Rating:</label>
+        <input type="text" name="attack" id="attack" required />
+      </div>
+      <div>
+        <label for="defense">Defense Rating:</label>
+        <input type="text" name="defense" id="defense" required />
+      </div>
+      <div>
+        <label for="readyForBattle">Ready for Battle:</label>
+        <input type="checkbox" name="readyForBattle" id="readyForBattle" />
+      </div>
+      <button type="submit">Add a Card to your Deck</button>
+      <form method="POST" action="/decks/<%= deck._id %>/cards">
+        <input type="hidden" name="cardId" value="<%= card._id %>" />
+        <button type="submit">Add to Deck</button>
+      </form>
     </form>
     <a href="/decks/<%= deck._id %>">Back to Cards</a>
-</body>
+  </body>
 </html>
