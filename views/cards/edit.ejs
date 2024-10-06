@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Card Edit Page</title>
- </head>
- <body>
-  <h1>Card Edit - <%= card.name %></h1>
-  <form method="POST" action="/cards/<%= card._id %>?_method=PUT">
-   <div>
-    <label for="name">Card Name:</label>
-    <input type="text" name="name" id="name" value="<%= card.name %>" />
-   </div>
-   <div>
-    <label for="level">Level:</label>
-    <input type="text" name="level" id="level" required value="<%= card.level %>" />
-</div>
-<div>
-    <label for="type">Type:</label>
-    <input type="text" name="type" id="type" required value="<%= card.type %>" />
-</div>
-<div>
-    <label for="attack">Attack Rating:</label>
-    <input type="text" name="attack" id="attack" required value="<%= card.attack %>" />
-</div>
-<div>
-  <label for="defense">Defense Rating:</label>
-  <input type="text" name="defense" id="defense" required value="<%= card.defense %>" />
-</div>
-   <div>
-    <label for="readyForBattle">Ready for Battle:</label>
-    <input type= "checkbox" name="readyForBattle" id="readyForBattle" <%=
-    card.readyForBattle ? "checked" : "" %> />
-   </div>
-   <button type="submit">Update Card</button>
-  </form>
- </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Edit Page</title>
+  </head>
+  <body>
+    <h1>Card Edit - <%= card.name %></h1>
+    <form method="POST" action="/cards/<%= card._id %>?_method=PUT">
+      <div>
+        <label for="name">Card Name:</label>
+        <input type="text" name="name" id="name" value="<%= card.name %>" />
+      </div>
+      <div>
+        <label for="level">Level:</label>
+        <input
+          type="text"
+          name="level"
+          id="level"
+          required
+          value="<%= card.level %>"
+        />
+      </div>
+      <div>
+        <label for="type">Type:</label>
+        <input
+          type="text"
+          name="type"
+          id="type"
+          required
+          value="<%= card.type %>"
+        />
+      </div>
+      <div>
+        <label for="attack">Attack Rating:</label>
+        <input
+          type="text"
+          name="attack"
+          id="attack"
+          required
+          value="<%= card.attack %>"
+        />
+      </div>
+      <div>
+        <label for="defense">Defense Rating:</label>
+        <input
+          type="text"
+          name="defense"
+          id="defense"
+          required
+          value="<%= card.defense %>"
+        />
+      </div>
+      <div>
+        <label for="readyForBattle">Ready for Battle:</label>
+        <input type= "checkbox" name="readyForBattle" id="readyForBattle" <%=
+        card.readyForBattle ? "checked" : "" %> />
+      </div>
+      <div>
+        <label for="image">Card Image:</label>
+        <input
+          type="text"
+          name="image"
+          id="image"
+          required
+          value="<%= card.image %>"
+        />
+      </div>
+      <button type="submit">Update Card</button>
+    </form>
+  </body>
 </html>
