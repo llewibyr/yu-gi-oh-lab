@@ -5,7 +5,9 @@
 # Yu-Gi-Oh Card App!
 
 # GitHub
-Links - https://github.com/llewibyr/yu-gi-oh-lab
+Links - GitHub: https://github.com/llewibyr/yu-gi-oh-lab
+      - Heroku: 
+     
 
 
 # Origin Story!
@@ -34,6 +36,7 @@ Attributions: This section should include links to any external resources (such 
  - MDN Web Docs - for tips/refrences 
  - ChatGPT - for debugging use ONLY!
  - GA Canvas Lessons - to refresh our memory 
+ - Heroku 
 
 
 
