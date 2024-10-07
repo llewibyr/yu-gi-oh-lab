@@ -6,7 +6,7 @@
 
 # GitHub
 Links - GitHub: https://github.com/llewibyr/yu-gi-oh-lab
-      - Heroku: 
+      - Heroku: https://yugioh-9a6c077f4470.herokuapp.com/
      
 
 
