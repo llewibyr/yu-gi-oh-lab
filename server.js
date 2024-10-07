@@ -27,7 +27,7 @@ mongoose.connection.on("error", (err) => {
   console.log(err);
 });
 
-const Card = require("./models/card");
+const Card = require("./models/Card");
 const Deck = require('./models/deck');
 
 // Setting up view engine and middleware

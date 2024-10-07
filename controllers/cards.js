@@ -1,4 +1,4 @@
-const Card = require("../models/card");
+const Card = require("../models/Card");
 const Deck = require("../models/deck")
 
 const getAllCards = async (req, res) => {
@@ -34,18 +34,14 @@ const createCard = async (req, res) => {
   req.body.readyForBattle = !!req.body.readyForBattle; 
   
   try {
-    await Card.create(req.body);
-    res.redirect("/cards");
-    if(!deck) {
-      deck.cards.push(newCard._id);
-      await deck.save();
-      res.redirect(`/decks/${deck._id}`);
-    }
+     await Card.create(req.body);
+     res.redirect('cards');
+    
   } catch (err) {
     console.error(err);
     res.render("cards/new", { error: err.message, card: req.body }); 
   }
-};
+}
 
 const deleteCard = async (req, res) => {
   try {

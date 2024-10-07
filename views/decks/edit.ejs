@@ -19,16 +19,6 @@
         </div>
         <button type="submit">Update Deck</button>
     </form>
-
-    <h2>Add Cards to Deck</h2>
-    <% cards.forEach(card => { %> 
-        <div>
-            <h3><%= card.name %></h3>
-            <a href="/decks/<%= deck._id %>/cards?cardId=<%= card._id %>">
-            <button type="button">Add Card to Deck</button>
-                    </a>
-            </form>
-        </div>
-    <% }) %>
+</div>
 </body>
 </html>

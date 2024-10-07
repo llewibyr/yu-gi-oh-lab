@@ -7,7 +7,7 @@ const cardsSchema = new mongoose.Schema({
     attack: String,
     defense: String,
     readyForBattle: Boolean,
-    image: [String]
+    image: String
 })
 
 const Card = mongoose.model('Card', cardsSchema)
